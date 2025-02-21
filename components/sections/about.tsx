@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { ReactBadge } from "@/components/badges/react";
 import { AnimatedLink } from "@/components/shared/animated-link";
 import { Section, SectionTitle } from "@/components/shared/section";
 

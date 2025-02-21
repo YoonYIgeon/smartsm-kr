@@ -30,13 +30,13 @@ export async function generateMetadata({ params }: PostPageProps) {
   return {
     title: post.title,
     description: post.summary,
-    keywords: ["Som3aware", "Blog", post.tag],
+    keywords: ["smartsm", "Blog", post.tag],
     openGraph: {
       title: post.title,
       description: post.summary,
       url: "https://som3aware.vercel.app/blog/" + slug,
       // images: [post.cover],
-      siteName: "Som3aware",
+      siteName: "smartsm",
     },
     twitter: {
       title: post.title,

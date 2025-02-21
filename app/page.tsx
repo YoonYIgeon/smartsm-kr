@@ -1,8 +1,6 @@
 import { About } from "@/components/sections/about";
-import { Socials } from "@/components/sections/socials";
-import { Headline } from "@/components/sections/headline";
 import { BlogPosts } from "@/components/sections/blog-posts";
-import { FeaturedProjects } from "@/components/sections/featured-projects";
+import { Headline } from "@/components/sections/headline";
 
 // --------- PAGE ---------
 export default function HomePage() {

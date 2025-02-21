@@ -1,4 +1,3 @@
-import { Project } from "som3aware";
 import {
   Boxes,
   Bug,
@@ -12,12 +11,12 @@ import {
 
 const PROJECTS = [
   {
-    id:'1',
+    id: "1",
     featured: true,
     title: "Reconciled",
     url: "https://reconciled.io",
     logo: <Command className="project-logo" />,
-    description: "A reverse invoice management platform for staffing agencies"
+    description: "A reverse invoice management platform for staffing agencies",
   },
   {
     id: "2",
@@ -65,7 +64,8 @@ const PROJECTS = [
     title: "Covid Tracker",
     url: "https://github.com/ahmedsomaa/covid-tracker/",
     logo: <Bug className="project-logo" />,
-    description: "An app to track covid patients built with Node, React & Auth0",
+    description:
+      "An app to track covid patients built with Node, React & Auth0",
   },
   {
     id: "8",
@@ -75,6 +75,6 @@ const PROJECTS = [
     logo: <ShoppingCart className="project-logo" />,
     description: "A node API for a store built with Typescript & PostgreSQL",
   },
-] satisfies Project[];
+] satisfies any[];
 
 export default PROJECTS;
