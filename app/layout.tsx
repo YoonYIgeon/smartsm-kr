@@ -65,6 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta
+          name="naver-site-verification"
+          content="3b00cee63d03aeb8d5239924a74580b9c50f2858"
+        />
+      </head>
       <body
         className={`${pretendard.className} font-sans bg-zinc-50 selection:bg-zinc-200 dark:bg-zinc-900 dark:selection:bg-zinc-700 scroll-smooth antialiased`}
       >
