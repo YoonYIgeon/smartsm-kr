@@ -35,13 +35,13 @@ export async function generateMetadata({ params }: PostPageProps) {
       title: post.title,
       description: post.summary,
       url: "https://som3aware.vercel.app/blog/" + slug,
-      images: [post.cover],
+      // images: [post.cover],
       siteName: "Som3aware",
     },
     twitter: {
       title: post.title,
       description: post.summary,
-      images: [post.cover],
+      // images: [post.cover],
       card: "summary_large_image",
     },
   };
@@ -68,13 +68,6 @@ export default async function PostPage({ params }: Readonly<PostPageProps>) {
         </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-4">
-        <Image
-          width={640}
-          height={320}
-          src={post.cover}
-          alt={`${post.title}'s cover image`}
-          className="rounded-lg w-full shadow-sm shadow-stone-900 dark:shadow-stone-700"
-        />
         <div className="space-y-1 text-center tracking-tight">
           <h1 className="font-bold text-2xl md:text-3xl">{post.title}</h1>
           <h2 className="text-muted-foreground font-semibold text-base md:text-lg">

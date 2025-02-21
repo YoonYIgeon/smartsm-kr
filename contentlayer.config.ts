@@ -10,7 +10,7 @@ export const Post = defineDocumentType(() => ({
   fields: {
     tag: { type: "string", required: true },
     title: { type: "string", required: true },
-    cover: { type: "string", required: true },
+    // cover: { type: "string", required: true },
     summary: { type: "string", required: true },
     publishedAt: { type: "date", required: true },
   },
@@ -25,8 +25,6 @@ export const Post = defineDocumentType(() => ({
     },
   },
 }));
-
-
 
 export default makeSource({
   contentDirPath: "posts",

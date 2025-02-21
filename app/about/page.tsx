@@ -1,103 +1,40 @@
 import Link from "next/link";
+import { Section, SectionTitle } from "@/components/shared/section";
 
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDescription,
-  TimelineItem,
-  TimelineLink,
-  TimelineTime,
-  TimelineTitle,
-} from "@/components/ui/timeline";
-import {
-  Section,
-  SectionSubtitle,
-  SectionTitle,
-} from "@/components/shared/section";
-
-import ABOUT from "@/content/about";
-import { NextBadge } from "@/components/badges/next";
-import { ReactBadge } from "@/components/badges/react";
-import { TypeScriptBadge } from "@/components/badges/typescript";
-import { TailwindCssBadge } from "@/components/badges/tailwindcss";
-
-// --------- PAGE LAYOUT ---------
+// --------- 페이지 레이아웃 ---------
 export default function AboutPage() {
   return (
     <Section>
-      <SectionTitle text="About me" />
+      <SectionTitle text="smartsm은" />
       <div className="grid grid-cols-1 gap-4">
         <p className="text-base text-justify text-muted-foreground tracking-tight font-normal">
-          Hello world! I'm Ahmed Ismail, a Full-Stack Software Engineer based in
-          Tanta, Egypt, with a deep passion for front-end development.
-          Currently, I'm working as a founding engineer at{" "}
+          안녕하세요! 저는 소셜미디어 컨설팅 전문가 <strong>smartsm</strong>
+          입니다. 브랜드의 SNS 성장을 돕고, 데이터를 기반으로 최적의 마케팅
+          전략을 설계합니다. 현재는{" "}
           <Link
-            href="https://reconciled.io"
+            href="https://routin.kr"
             className="underline decoration-dotted decoration-1 underline-offset-4 text-muted-foreground/90"
           >
-            Reconciled
+            <strong>routin</strong>
           </Link>
-          , where I get to blend creativity with technical skills to craft
-          beautiful, functional, and intuitive user experiences.
+          에서 엔지니어로 활동하며, 디지털 마케팅과 기술을 접목한 솔루션을
+          개발하고 있습니다.
         </p>
         <p className="text-base text-justify text-muted-foreground tracking-tight font-normal">
-          I'm all about creating software that not only works but feels right.
-          My tools of choice are <ReactBadge />, <NextBadge />,{" "}
-          <TypeScriptBadge />, and <TailwindCssBadge />
-          —technologies that empower me to build fast, responsive, and scalable
-          apps. But it doesn't stop there. I'm also passionate about design
-          engineering—the intersection of clean, elegant code and user-centric
-          design. I believe the best apps are those that blend great usability
-          with a thoughtful aesthetic.
+          저는 단순한 홍보가 아닌{" "}
+          <strong>브랜드의 정체성을 강화하는 콘텐츠</strong>를 만드는 것이
+          목표입니다. 다양한 기술과 데이터 분석을 활용해{" "}
+          <strong>트렌드에 맞는 SNS 전략</strong>을 제공합니다. 감각적인
+          디자인과 효과적인 스토리텔링이 결합된 콘텐츠는 브랜드의 차별화를
+          만들어 냅니다.
         </p>
         <p className="text-base text-justify text-muted-foreground tracking-tight font-normal">
-          Outside of coding, I find solace in reading, particularly history and
-          technology-related topics. I also enjoy writing and experimenting with
-          new technologies. I'm a lifelong learner, always excited to dive into
-          new programming paradigms or the latest UX/UI design trends.
+          SNS는 단순한 플랫폼이 아닙니다. 제대로 활용하면{" "}
+          <strong>브랜드의 가장 강력한 성장 엔진</strong>이 될 수 있습니다. 저는
+          항상 새로운 마케팅 트렌드와 UX/UI 디자인을 연구하며, 최신 알고리즘과
+          소비자 행동 분석을 통해 **최적의 SNS 컨설팅 솔루션**을 제공합니다.
+          지금, SmartSM과 함께 브랜드를 성장시켜보세요! 🚀
         </p>
-      </div>
-      <SectionSubtitle text="Education" />
-      <div className="grid grid-cols-1 gap-4 px-2">
-        <Timeline>
-          {ABOUT.education.map((item) => (
-            <TimelineItem key={item.id}>
-              <TimelineConnector />
-              <TimelineTime>
-                {`${item.period.from} - ${item.period.to}`}
-              </TimelineTime>
-              <TimelineContent>
-                <TimelineTitle>{item.institute}</TimelineTitle>
-                <TimelineDescription>{item.degree}</TimelineDescription>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
-      <SectionSubtitle text="Experience" />
-      <div className="grid grid-cols-1 gap-4 px-2">
-        <Timeline>
-          {ABOUT.experience.map((item) => (
-            <TimelineItem key={item.id}>
-              <TimelineConnector />
-              <TimelineTime>
-                {`${item.period.from} - ${item.period.to}`}
-              </TimelineTime>
-              <TimelineContent>
-                <TimelineTitle>{item.role.title}</TimelineTitle>
-                <TimelineLink
-                  target="_blank"
-                  href={item.company.url}
-                  referrerPolicy="no-referrer"
-                >
-                  {item.company.name}
-                </TimelineLink>
-              </TimelineContent>
-              <TimelineDescription>{item.role.description}</TimelineDescription>
-            </TimelineItem>
-          ))}
-        </Timeline>
       </div>
     </Section>
   );

@@ -7,38 +7,19 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { MaxWidthWrapper } from "@/components/layout/max-width-wrapper";
-import { FreePalestineBanner } from "@/components/banners/free-palestine";
 
 // --------- FONTS ---------
-const fontLogo = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-logo",
-  weight: "100 900",
-});
-
-const fontMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-mono",
-  weight: "100 900",
-});
-
-const fontDisplay = Figtree({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const fontSans = Karla({
-  subsets: ["latin"],
-  variable: "--font-sans",
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
 });
 
 // --------- METADATA ---------
 export const metadata: Metadata = {
-  metadataBase: new URL("https://som3aware.vercel.app/"),
-  title: { default: "Som3aware", template: "%s | Som3aware" },
+  metadataBase: new URL("https://smartsm.vercel.app/"),
+  title: { default: "smartsm", template: "%s | smartsm" },
   description: "Crafting elegant products that captivate and delight users ✨",
   keywords: [
-    "Som3aware",
+    "smartsm",
     "Software Engineering",
     "Career",
     "Events",
@@ -47,11 +28,11 @@ export const metadata: Metadata = {
     "Contact",
   ],
   openGraph: {
-    title: "Som3aware",
+    title: "smartsm",
     description:
       "Crafting elegant products that captivate and delight users ✨",
-    url: "https://som3aware.vercel.app/",
-    siteName: "Som3aware",
+    url: "https://smartsm.vercel.app/",
+    siteName: "smartsm",
     locale: "en_US",
     type: "website",
   },
@@ -67,9 +48,9 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Som3aware",
-    site: "Som3aware",
-    creator: "@som3aware",
+    title: "smartsm",
+    site: "smartsm",
+    creator: "@smartsm",
     description:
       "Crafting elegant products that captivate and delight users ✨",
     card: "summary_large_image",
@@ -85,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontDisplay.variable} ${fontMono.variable} ${fontLogo.variable} font-sans bg-zinc-50 selection:bg-zinc-200 dark:bg-zinc-900 dark:selection:bg-zinc-700 scroll-smooth antialiased`}
+        className={`${pretendard.className} font-sans bg-zinc-50 selection:bg-zinc-200 dark:bg-zinc-900 dark:selection:bg-zinc-700 scroll-smooth antialiased`}
       >
         <ThemeProvider
           enableSystem
@@ -94,7 +75,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mb-6">
-            <FreePalestineBanner />
             <Header />
             <MaxWidthWrapper>{children}</MaxWidthWrapper>
             <Footer />

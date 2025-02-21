@@ -10,9 +10,7 @@ export default function HomePage() {
     <div className="space-y-16">
       <Headline />
       <About />
-      <FeaturedProjects />
       <BlogPosts />
-      <Socials />
     </div>
   );
 }
