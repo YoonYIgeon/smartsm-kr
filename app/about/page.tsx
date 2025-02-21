@@ -12,7 +12,7 @@ export default function AboutPage() {
           입니다. 브랜드의 SNS 성장을 돕고, 데이터를 기반으로 최적의 마케팅
           전략을 설계합니다. 현재는{" "}
           <Link
-            href="https://routin.kr"
+            href="https://routin.co.kr"
             className="underline decoration-dotted decoration-1 underline-offset-4 text-muted-foreground/90"
           >
             <strong>routin</strong>
